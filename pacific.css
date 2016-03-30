@@ -11,7 +11,6 @@ body {
     color: #666666;
     padding: 0;
     margin: 0;
-    overflow: hidden;
     min-height: 100%;
 }
 
@@ -93,7 +92,11 @@ dt {
     font-weight: bold;
     display: inline;
 }
-
+#resort2 {
+    color: #5C7FA3;
+    font-weight: bold;
+    display: inline;
+}
 main ul {
     list-style-image: url(images/marker.gif);
 }
@@ -118,6 +121,9 @@ td, th { border: 1px solid #3399CC; padding: 5px; }
 td {text-align: center;}
 
 #text {text-align: left;}
+#text2 {text-align: left;}
+#text3 {text-align: left;}
+
 
 :nth-of-type {background-color:#F5FAFC}
 
