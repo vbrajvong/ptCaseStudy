@@ -16,24 +16,29 @@ body {
 
 #wrapper {
     width: 80%;
+    margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
+    min-width: 960px;
+    max-width: 1000px;
     background-color: #90C7E3;
     padding: 0;
     overflow: hidden;
+    box-shadow: 3px 3px 3px #333333;
+    margin-top: 5px;
 }
 
 h1 {
     color: #FFFFFF;
     font-family: Georgia, Times, 'Times New Roman', serif;
-    display: inline-block
+    display: inline-block;
+    margin-top: 0 auto;
 }
 
 header {
     background-image: url(images/sunset.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    line-height: 400%;
     text-indent: 1em;
     background-color: #000033;
     text-align: center;
@@ -71,7 +76,12 @@ nav a:hover {
 
 main {
     background-color: #FFFFFF;
-    margin-left: 160px;
+    margin-left: 190px;
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    display: block;
 }
 
 h2 {
@@ -108,7 +118,11 @@ footer {
     text-align: center;
     height: 100%;
     overflow: hidden;
+    padding-top: 40px;
+   
 }
+
+#footer {clear: both;}
 
 div {
     font-size: 90%;
@@ -139,6 +153,8 @@ article {
     display: block;
 }
 
+video, embed { float: right; padding-left: 20px; }
+
 #mobile {
     display: none;
 }
@@ -146,6 +162,69 @@ article {
 #desktop {
     display: inline;
 }
+
+form {display: block} 
+
+#homehero,
+#yurthero,
+#trailhero {
+    background-size: 100% 100%;
+    margin-left: 190px;
+    line-height: 0;
+}
+
+label { 
+    float: left;
+    display: block;
+    text-align: right;
+    width: 120px;
+    padding-right: 20px;
+}
+
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#submit {
+    margin-left: 140px;
+}
+
+
+#gallery { position: relative;
+    clear: both;}
+#gallery ul {list-style-type: none;
+    width: 300px; 
+}
+#gallery li { display: inline; 
+     float: left;
+	 padding: 10px; 
+}
+#gallery img { border-style: none;
+}
+#gallery a { text-decoration: none;
+             font-style: italic;  
+             color: #C0C0C0; 
+}
+#gallery span { position: absolute;
+                left: -1000px;
+               opacity: 0;
+              transition:  opacity 3s ease-in-out; 
+}
+#gallery a:hover span {     
+			position: absolute;
+			top: 16px;
+			left: 320px; 
+			text-align: center; 
+            opacity: 1; 
+}
+figure {    position: absolute;
+			left: 280px; 
+			text-align: center; 
+            opacity: .25;
+}
+
 
 @media only screen and (max-width: 64em) {
     body {
@@ -159,6 +238,7 @@ article {
     }
     main {
         margin-left: 0;
+        padding-top: 150px
     }
     nav {
         float: none;
@@ -207,6 +287,7 @@ article {
         background-image: none;
         height: 0%;
     }
+    video, embed, #gallery {display: none;}
     #mobile { display: inline;}
     #desktop {display: none;}
 }
